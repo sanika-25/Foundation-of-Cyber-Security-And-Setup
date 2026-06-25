@@ -1,0 +1,255 @@
+1. OSI Model Layers & Functions
+
+OSI (Open Systems Interconnection) Model divides network communication into 7 layers.
+
+Layer	Function	Example
+7. Application	Provides services to users	HTTP, FTP, SMTP
+6. Presentation	Data formatting, encryption	SSL/TLS
+5. Session	Creates and manages sessions	NetBIOS
+4. Transport	Reliable delivery of data	TCP, UDP
+3. Network	Routing and IP addressing	IP, ICMP
+2. Data Link	MAC addressing, frame transfer	Ethernet
+1. Physical	Physical transmission	Cables, Fiber
+Data Flow:
+
+Application → Presentation → Session → Transport → Network → Data Link → Physical
+
+Mnemonic:
+All People Seem To Need Data Processing
+
+2. TCP/IP Protocol Suite
+
+TCP/IP is the practical model used on the Internet.
+
+TCP/IP Layer	Function	Protocol
+Application	User interaction	HTTP, FTP, DNS
+Transport	End-to-end communication	TCP, UDP
+Internet	Addressing and routing	IP
+Network Access	Hardware transmission	Ethernet
+Important Protocols:
+TCP → Reliable, connection-oriented
+UDP → Fast, connectionless
+IP → Addressing
+ARP → IP → MAC conversion
+Example:
+
+Opening Google:
+HTTP → TCP → IP → Ethernet
+
+3. DNS & HTTP/HTTPS Deep Dive
+DNS (Domain Name System)
+
+Converts domain names into IP addresses.
+
+Example:
+
+www.google.com
+↓
+142.250.x.x
+DNS Process:
+User enters website URL
+Browser checks cache
+DNS Resolver receives request
+Root Server
+TLD Server (.com)
+Authoritative Server
+Returns IP
+
+Port: 53
+
+HTTP (HyperText Transfer Protocol)
+
+Transfers webpage data.
+
+Methods:
+
+GET → Retrieve
+POST → Send
+PUT → Update
+DELETE → Remove
+
+Port: 80
+
+HTTPS
+
+Secure HTTP using SSL/TLS encryption.
+
+Process:
+
+Client request
+Certificate verification
+Key exchange
+Encrypted communication
+
+Port: 443
+
+Benefits:
+
+Confidentiality
+Integrity
+Authentication
+4. IP Addressing, Subnetting, and NAT
+IP Address
+
+Unique device identifier.
+
+Example:
+
+192.168.1.10
+
+IPv4 → 32-bit
+IPv6 → 128-bit
+
+Subnetting
+
+Divides a network into smaller networks.
+
+Example:
+
+192.168.1.0/24
+
+Subnet Mask:
+
+255.255.255.0
+
+Formula:
+
+Hosts = 2^n − 2
+
+Example:
+
+/26
+Available Hosts:
+2^(32−26)-2 = 62
+NAT (Network Address Translation)
+
+Converts private IP → public IP.
+
+Types:
+
+Static NAT
+Dynamic NAT
+PAT (Port Address Translation)
+
+Example:
+
+Private:
+192.168.1.5
+
+Public:
+203.0.113.25
+
+Benefits:
+
+Saves public IPs
+Improves security
+5. Symmetric vs Asymmetric Encryption
+Feature	Symmetric	Asymmetric
+Keys	Same key	Public + Private
+Speed	Fast	Slower
+Security	Moderate	Higher
+Symmetric
+
+One key for encryption and decryption.
+
+Examples:
+
+AES
+DES
+Asymmetric
+
+Two keys:
+
+Public Key
+Private Key
+
+Examples:
+
+RSA
+ECC
+6. Hashing (MD5, SHA256)
+
+Hashing converts data → fixed-size output.
+
+Example:
+
+Hello
+↓
+Hash Value
+MD5
+128-bit
+Fast
+Not secure
+SHA256
+256-bit
+More secure
+Used in blockchain and SSL
+
+Applications:
+
+Password storage
+File verification
+Digital signatures
+7. Digital Certificates & SSL/TLS
+Digital Certificate
+
+Electronic identity proof.
+
+Contains:
+
+Public Key
+Domain Name
+Issuer
+Expiry Date
+
+Issued by:
+Certificate Authority (CA)
+
+Examples:
+
+DigiCert
+Let's Encrypt
+SSL/TLS Handshake
+Client Hello
+Server Hello
+Certificate Exchange
+Key Generation
+Secure Communication
+
+TLS provides:
+
+Authentication
+Encryption
+Integrity
+8. Hands-on: Encrypt & Decrypt Using OpenSSL
+Generate Key
+openssl rand -base64 32 > key.txt
+Encrypt Message
+echo "CyberSecurity" > msg.txt
+
+openssl enc -aes-256-cbc \
+-in msg.txt \
+-out encrypted.enc \
+-pass file:key.txt
+Decrypt Message
+openssl enc -d -aes-256-cbc \
+-in encrypted.enc \
+-out decrypted.txt \
+-pass file:key.txt
+
+View decrypted text:
+
+cat decrypted.txt
+
+Expected Output:
+
+CyberSecurity
+Check Hash
+
+MD5:
+
+openssl dgst -md5 msg.txt
+
+SHA256:
+
+openssl dgst -sha256 msg.txt
