@@ -1,0 +1,116 @@
+1)CIA triad
+The three classical goals are confidentiality, integrity, and availability. These are often called the CIA triad and form the basic conceptual foundation of information security.
+1)Confidentiality:
+Confidentiality means information is accessible only to authorized individuals, systems, or processes. It prevents unauthorized disclosure of sensitive material such as passwords, payroll data, examination papers, designs, and business strategies.
+Controls that support confidentiality include access control, encryption, classification, secure sharing rules, nondisclosure practices, and physical protection. A breach of confidentiality occurs when data is exposed to someone who should not have seen it, even if the data is not modified or deleted.
+2)Integrity:
+Integrity means information remains accurate, complete, authentic, and unaltered except by authorized action. If marks are changed without authorization, if transaction records are tampered with, or if a log is edited to hide an attack, integrity has failed.
+Integrity is supported by hashes, digital signatures, access control, audit logs, version control, validation checks, and change management. For students, a simple way to understand integrity is that trusted decisions require trusted data.
+3)Availability:
+Availability means information and services are accessible to legitimate users when needed. If a server crashes during admissions, a denial-of-service attack blocks access, or ransomware locks critical files, availability is affected.
+Availability depends on redundancy, backups, patching, maintenance, network resilience, disaster recovery, and performance monitoring. It is not enough for information to be confidential and accurate if the organization cannot use it at the right time.
+
+2)Threat:
+1)Phishing:
+A fake email, message, or website that tricks users into giving passwords, OTPs, or personal data.
+Example:
+You receive an email saying “Your bank account is blocked. Login now.”
+Protection:
+Verify sender email
+Avoid unknown links
+Enable 2FA
+
+2)Malware:
+Malicious software designed to damage, steal, or control systems.
+Types:
+Virus
+Trojan
+Worm
+Spyware
+Example:
+Downloading a fake cracked software that infects your PC.
+Protection:
+Use antivirus
+Install trusted software only
+Update OS
+
+3. DDoS (Distributed Denial of Service):
+Attackers send huge traffic from many systems to overload a server.
+Example:
+An e-commerce website becomes unavailable.
+Protection:
+Firewalls
+Load balancing
+DDoS protection services
+
+4. SQL Injection (SQLi):
+Attackers insert malicious SQL commands into website input fields.
+Example:
+' OR '1'='1
+This may bypass login if the site is vulnerable.
+Protection:
+Prepared statements
+Input validation
+Parameterized queries
+
+5. Brute Force Attack:
+Trying many username/password combinations until one works.
+Example:
+Testing thousands of passwords automatically.
+Protection:
+Strong passwords
+Account lockout
+Multi-factor authentication
+
+6. Ransomware:
+Malware that encrypts files and demands payment.
+Example:
+“All your files are locked. Pay ₹50,000.”
+Protection:
+Keep backups
+Avoid suspicious attachments
+Update systems
+
+3)Attacks:
+1)Social Engineering:
+Social engineering is a cyberattack technique where attackers manipulate people psychologically instead of directly attacking technology. The goal is to trick users into revealing confidential information, opening malicious files, clicking harmful links, or giving access to systems.
+Common Techniques:
+Phishing: Fake emails or websites
+Pretexting: Creating a fake identity to gain trust
+Baiting: Offering something attractive to infect devices
+Tailgating: Entering restricted areas by following authorized persons
+Example:
+An attacker sends an email pretending to be the IT department asking employees to reset their passwords.
+Prevention:
+Employee awareness training
+Verify identity before sharing information
+Use multi-factor authentication (MFA)
+
+2. Wireless Attacks:
+Wireless attacks target wireless communication networks such as Wi-Fi, Bluetooth, and mobile networks to intercept data, gain access, or disrupt communication.
+Common Types:
+Evil Twin Attack: Fake Wi-Fi hotspot that looks legitimate
+Packet Sniffing: Capturing wireless traffic
+Wi-Fi Password Cracking
+Rogue Access Point: Unauthorized wireless access device
+Example:
+A user connects to a free public Wi-Fi at a café and attackers capture login information.
+Prevention:
+Use strong Wi-Fi passwords (WPA2/WPA3)
+Avoid public Wi-Fi for sensitive work
+Use VPN when necessary
+Disable automatic Wi-Fi connection
+
+3. Insider Threats:
+Insider threats occur when a person inside an organization misuses authorized access and causes security incidents. The insider may act intentionally or accidentally.
+Types:
+Malicious Insider: Intentionally steals or damages data
+Negligent Insider: Accidentally exposes information
+Compromised Insider: Employee account is hacked
+Example:
+An employee copies confidential company files and shares them externally.
+Prevention:
+Role-based access control
+Continuous monitoring and logging
+Security awareness programs
+Regular access reviews
