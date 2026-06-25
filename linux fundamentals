@@ -1,0 +1,19 @@
+1)file navigation:
+1] current directory:pwd
+2]list files:ls
+3]chanage directory:cd
+
+2)permissions:
+chmod 777 file.txt
+chown kali:kali file.txt
+
+3)Package Management
+1]sudo apt update
+2]sudo apt install nmap
+3]dpkg -l
+
+4)Networking
+1]ifconfig
+2]ping google.com
+3]netstat -tulnp
+4]traceroute google.com
